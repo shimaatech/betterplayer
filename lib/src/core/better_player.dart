@@ -102,7 +102,7 @@ class _BetterPlayerState extends State<BetterPlayer>
     ///full screen is on, then full screen route must be pop and return to normal
     ///state.
     if (_isFullScreen) {
-      Wakelock.disable();
+      WakelockPlus.disable();
       _navigatorState.maybePop();
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
           overlays: _betterPlayerConfiguration.systemOverlaysAfterFullScreen);
